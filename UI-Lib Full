@@ -1,0 +1,58 @@
+local library = {}
+
+function library:CreateWindow(OkText)
+    local Design = Instance.new("ScreenGui")
+    local TopMain = Instance.new("Frame")
+    local Container = Instance.new("Frame")
+    local UIGridLayout = Instance.new("UIGridLayout")
+local Title = Instance.new("TextLabel")
+
+Design.Name = "Design"
+Design.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Design.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TopMain.Name = "TopMain"
+TopMain.Parent = Design
+TopMain.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+TopMain.BorderSizePixel = 0
+TopMain.Position = UDim2.new(0.229337305, 0, 0.286857128, 0)
+TopMain.Size = UDim2.new(0, 714, 0, 28)
+
+Container.Name = "Container"
+Container.Parent = TopMain
+Container.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Container.BorderSizePixel = 0
+Container.Position = UDim2.new(-0.00104598701, 0, 0.9822855, 0)
+Container.Size = UDim2.new(0, 714, 0, 401)
+
+UIGridLayout.Parent = Container
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0, 150, 0, 45)
+
+Title.Name = "Title"
+Title.Parent = TopMain
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.330532223, 0, 0.0357142873, 0)
+Title.Size = UDim2.new(0, 255, 0, 27)
+Title.Font = Enum.Font.Nunito
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 24.000
+
+local POGLibrary = {}
+
+function POGLibrary:CreateButton(text)
+    local TextButton = Instance.new("TextButton")
+
+    TextButton.Parent = Container
+    TextButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    TextButton.BorderSizePixel = 0
+    TextButton.Size = UDim2.new(0, 157, 0, 43)
+    TextButton.Font = Enum.Font.SourceSansLight
+    TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextButton.TextSize = 14.000
+end
+return library
+end
+
+return library
